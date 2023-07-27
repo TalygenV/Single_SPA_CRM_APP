@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Waiting...</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.11.5/oidc-client.js"></script>
+    <script>
+      if (window.location.hash) {
+        window.location.hash = decodeURIComponent(window.location.hash).replace(
+          "#",
+          "?"
+        );
+      }
+      var mgr = new Oidc.UserManager({
+        response_mode: "query",
+        userStore: new Oidc.WebStorageStateStore(),
+      })
+        .signinRedirectCallback()
+        .then(function (user) {
+          console.log("signin response success", user);
+          if(user.state){
+            window.location.href = user.state;
+          }else{
+            window.location.href = "/User/Home";
+          }
+          
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>

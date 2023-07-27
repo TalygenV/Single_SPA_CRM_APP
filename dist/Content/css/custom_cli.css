@@ -1,0 +1,100 @@
+.vue-slider-dot-handle {
+  position: absolute;
+}
+.vue-slider-dot-tooltip-inner {
+  height: 28px !important;
+}
+.vue-slider-dot-tooltip {
+  opacity: unset !important;
+}
+.sampledata {
+  font-size: 20px;
+  border-left: 2px solid #878787 !important;
+  border-right: 2px solid #878787 !important;
+  padding: 0px 12px;
+}
+.__bar-is-vertical,.__bar-is-horizontal{
+  background: rgb(146 146 146) !important;
+}
+
+/* multislect css start */
+.multiselect {min-width: 200px; border-radius: 0px!important;color: #303030!important; border-color: #303030!important;   min-height: 28px;font-size: 14px;}.multiselect-dropdown > .multiselect-no-options{display: none;}.multiselect__select:before {color: #000; border-color: #0e0e0e transparent transparent;}.multiselect.is-invalid div.multiselect__tags{padding-top: 0px;}.multiselect.is-invalid .multiselect__input{min-height: 32px; padding-left: 0px;}.multiselect__tags {min-height: 36px; padding: 8px 40px 0 8px; border-radius: 0px; border: 1px solid #303030;}.multiselect__single {font-size: 14px;margin-bottom: 6px;}.multiselect__placeholder {color:#515058; margin-bottom: 6px; padding-top: 0px;}.multiselect__input{margin-bottom:1px; min-height: auto; line-height:normal; font-size: 14px;}
+/* multislect css end */
+
+.font-cstm {
+  font-size: 16px;
+  padding: 10px;
+  display: inline-block;
+}
+.tab-border {
+  border: 1px solid #6c757d !important;
+  padding: 0.5rem 0px !important;
+}
+.cstm-border-bottom {
+  border-bottom: 1px solid #6c757d !important;
+}
+.notify-container {
+  max-height: 336px;
+  overflow-y: auto;
+}
+.border-cstm {
+  border: 1px solid #6c757d !important;
+}
+.pd-cstm {
+  padding: 10px 0;
+}
+
+.bg-unread {
+  background: #ddd;
+}
+.bg-read {
+  background: #f4f4f4;
+}
+.list-view-more {
+  position: relative;
+  padding-left: 10px;
+  border-bottom: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.list_rw .detail p {
+  margin-bottom: 0;
+}
+
+.more-details .pop {
+  font-weight: 600 !important;
+}
+.p-action-btn-noti {
+  padding: 0px 10px;
+  min-width: 65px;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+}
+
+.short-menu-item .barprogress {
+  right: 40px;
+  top: -32px;
+}
+.multiselect__tags {
+    min-height: 26px !important;
+    display: block !important;
+    padding: 6px 30px 0 8px !important;
+    border-radius: 0px !important;
+    border: 1px solid #bbbbbb !important;
+    background: #fff !important;
+    font-size: 14px !important;
+    line-height: 12px !important;
+}
+.img-icons {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+.img-icons img {
+ width: 88%;
+}
+

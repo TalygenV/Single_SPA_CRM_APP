@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="icon" href="/Content/images/favicon.ico"/><title>Talygen Microfrontends</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"><script src="https://talygenv.github.io/-Vue-JS-Content/bootboxNew.js"></script><script src="https://talygenv.github.io/-Vue-JS-Content/jquery.RMutiLevelSelect.js"></script><script src="https://talygenv.github.io/-Vue-JS-Content/tourguide.min.js"></script><script src="https://talygenv.github.io/-Vue-JS-Content/jquery.treeview.1.4.1.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script><link rel="stylesheet" href="https://talygenv.github.io/Vue-UI-Content/css/custom.css"><link rel="stylesheet" href="https://talygenv.github.io/Vue-UI-Content/css/default.css"><link rel="stylesheet" href="https://talygenv.github.io/Vue-UI-Content/css/tourguide.css"><link rel="stylesheet" href="/Content/css/tree.css"><link rel="stylesheet" href="/Content/css/DropZone.css"><link rel="stylesheet" href="/Content/css/custom_cli.css"><link href="https://talygenv.github.io/-Vue-JS-Content/c3.min.css" rel="stylesheet"/><script src="https://talygenv.github.io/-Vue-JS-Content/c3.min.js"></script><script src="https://talygenv.github.io/-Vue-JS-Content/d3.v3.min.js"></script><script src="https://cdn.socket.io/socket.io-1.0.0.js"></script><link rel="stylesheet" href="https://talygenv.github.io/-Vue-JS-Content/progress.css"><link href="https://cdn.boldreports.com/4.2.52/content/material/bold.reports.all.min.css" rel="stylesheet"/><meta name="importmap-type" content="systemjs-importmap"/><script type="systemjs-importmap">{
+      "imports": {
+        "@talygen/root-config": "https://appone.talygen.com/talygen-root-config.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.1/lib/system/single-spa.min.js",
+        "@talygen/authservice": "https://apponeauth.talygen.com/talygen-authservice.js",
+        "@talygen/navbar": "https://apponenav.talygen.com/app.js",
+        "@talygen/crm": "https://talygenv.github.io/Single_SPA_CRM_APP/dist/app.js",        
+         "@talygen/docstorage": "https://talygenv.github.io/Single_SPA_DOCSTORAGE_APP/dist/app.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
+        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
+        "@talygen/root-config/": "https://appone.talygen.com/",
+        "@talygen/navbar/": "https://apponenav.talygen.com/",
+        "@talygen/crm/": "https://talygenv.github.io/Single_SPA_CRM_APP/",        
+        "@talygen/docstorage":"https://talygenv.github.io/Single_SPA_DOCSTORAGE_APP/dist/",
+        "@talygen/authservice/": "apponeauth.talygen.com/"   
+      }
+}</script><script src="https://cdn.jsdelivr.net/npm/import-map-overrides/dist/import-map-overrides.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script><style>/**********************loader***********************/
+    .overlay {
+        background: rgba(0,0,0,0.8);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lds-ring img {
+        display: none !important;
+    }
+
+    /******New Search Loader - Harjit Singh 17May2022**********/
+    @keyframes load {
+        0% {
+            transform: translateX(40px);
+        }
+
+        50% {
+            transform: translateX(-30px);
+        }
+
+        100% {
+            transform: translateX(40px);
+        }
+    }
+
+    .lds-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 10px;
+        background: #3498DB;
+        border-radius: 5px;
+        -webkit-animation: load 1.8s ease-in-out infinite;
+        animation: load 1.8s ease-in-out infinite;
+    }
+
+    .lds-ring::before, .lds-ring::after {
+        position: absolute;
+        display: block;
+        content: "";
+        -webkit-animation: load 1.8s ease-in-out infinite;
+        animation: load 1.8s ease-in-out infinite;
+        height: 10px;
+        border-radius: 5px;
+    }
+
+    .lds-ring:before {
+        top: -20px;
+        left: 10px;
+        width: 40px;
+        background: #EF4836;
+    }
+
+    .lds-ring:after {
+        bottom: -20px;
+        width: 35px;
+        background: #F5AB35;
+    }
+    /******New Search Loader - Harjit Singh 17May2022**********/</style></head><body><div class="overlay" id="divProgress1" style="display: block;"><div class="lds-ring"><img style="max-width: 50%; position: absolute; top: 18px; left: 19px;" class="blob" alt=""><div></div><div></div><div></div><div></div></div></div><div class="overlay" id="notifymessage" style="display:none;"><div class="alert alert-dismissible fade show msg mw-90" role="alert"><span></span> <button type="button" class="close p-1" id="closenotifymessage" style="background:none !important;"><span aria-hidden="true"><em class="fa fa-times text-secondary"></em></span></button></div></div><div class="w-100" id="content"><section id="nav-bar-1-container"></section><section id="page-2-container"></section><div class="w-100 float-left" id="talygenfooter" style="display: none;"><footer class="mt-3"><div class="container-fluid p-0"><div class="col-sm-12 col-md-12 col-lg-2 float-left text-center py-0 d-sm-block d-lg-none ipadfix light-ftr-logo"><a href="javascript:;"><img src="/Content/images/footer-logo.png" alt="footer-logo"></a></div><div class="col-sm-12 col-md-12 col-lg-5 float-left pl-lg-0 ipadfix"><div class="contri_translate ipaddnone cursor-pointer"><span title="Contribute a better translation" id="ContributeToLang">Contribute a better translation</span></div><p class="copyright text-center">Copyright © Talygen. All Rights Reserved.</p></div><div class="col-sm-12 col-md-12 col-lg-2 float-left text-center pt-2 d-none d-lg-block ipaddnone light-ftr-logo"><a href="https://talygen.com/"><img src="/Content/images/footer-logo.png" alt="footer-logo"></a></div><div class="col-sm-12 col-md-12 col-lg-5 float-left text-center ipadfix"><ul><li><a href="/Feedback" class="" title="$t('Feedback')">Feedback</a></li><li><a href="/Test" class="" title="Termsofservice">Termsofservice</a></li><li><a href="/AboutUs" class="" title="About Talygen">About Talygen</a></li><li><a href="/TalygenHelp" class="" title="$t('Help')">Help</a></li><li><a href="/SupportTickets" class="" title="$t('TalygenSupport')">TalygenSupport</a></li></ul></div></div><div id="ContributeToLanguage"></div></footer></div></div><script>// System.import('@talygen/styleguide');
+    System.import('@talygen/root-config');</script><script>const imo = document.createElement('import-map-overrides-full', { is: 'import-map-overrides-full' });
+    imo.setAttribute('show-when-local-storage', 'devtools');
+    const attachShadowOriginal = imo.attachShadow;
+    imo.attachShadow = function (options) {
+      return this.shadowRoot ?? attachShadowOriginal.apply(this, [options]);
+    };
+    document.body.appendChild(imo);</script></body></html>
